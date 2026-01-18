@@ -2,10 +2,10 @@ import toast from "react-hot-toast";
 import styles from "./SearchBar.module.css";
 
 interface SearchBarProps {
-  onSumbit: (query: string) => void;
+  onSubmit: (query: string) => void;
 }
 
-const SearchBar = ({ onSumbit }: SearchBarProps) => {
+const SearchBar = ({ onSubmit }: SearchBarProps) => {
   const handleSubmit = (formData: FormData) => {
     const query = formData.get("query") as string;
 
@@ -13,7 +13,7 @@ const SearchBar = ({ onSumbit }: SearchBarProps) => {
       toast.error("Please enter your search query.");
       return;
     }
-    onSumbit(query);
+    onSubmit(query);
   };
 
   return (

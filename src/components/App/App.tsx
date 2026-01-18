@@ -36,7 +36,7 @@ const App = () => {
   return (
     <div className={css["app"]}>
       <div>
-        <SearchBar onSumbit={handleSubmit} />
+        <SearchBar onSubmit={handleSubmit} />
         <MovieGrid movies={movies} onSelect={setModalMovie} />
         {loading && <Loader />}
         {error && <ErrorMessage />}
